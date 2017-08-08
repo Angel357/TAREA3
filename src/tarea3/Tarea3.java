@@ -11,7 +11,7 @@ public class Tarea3 {
     Scanner scan=new Scanner(System.in);
     int opcion, opcionUsuario,contUsers;
     String[] users;
-    String Vusuario;
+    String Vusuario, P1,P2;
   
     public static void main(String[] args) {
         Tarea3 t=new Tarea3();
@@ -103,6 +103,29 @@ public class Tarea3 {
             
         }
     public void Palindromas(){
+        P2="";
+        System.out.println("\n\n                    Ingrese la palabra que desea conocer si es Palindroma o no.\n\n");
+        P1=scan.nextLine();
+        System.out.println(""+P1);
+        int n=P1.length()-1;
+        for(int x=P1.length();x>0;x--){
+            P2=P2+P1.charAt(n);
+            n--;
+        }
+        P1=P1.toLowerCase();
+        P1=P1.replaceAll("\\S","");
+        P2=P2.toLowerCase();
+        P2=P2.replaceAll("\\s"," ");
+        
+        System.out.println(""+P2);
+        if(P1.equals(P2)){
+            System.out.println("\n\n\n           La palabra es Palindroma\n\n\n ");
+            Menu();
+        }
+        else{
+            System.out.println("\n\n\n           La palabra NO es Palindroma\n\n\n ");
+            Menu();
+        }
         
     }
 }
