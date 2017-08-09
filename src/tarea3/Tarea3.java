@@ -55,7 +55,7 @@ public class Tarea3 {
                     System.out.println("\n\n");
                     for(int x=0;x<5;x++){
                         System.out.println("Ingrese el usuario numero: "+(x+1));
-                        users[x]=scan.next();
+                        users[x]=scan2.nextLine();
                     }
                     System.out.println("\n\n");
                     Usuarios();
